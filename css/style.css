@@ -23,4 +23,42 @@ body {
     background-size: cover;  /* cover the entire container*/
     background-position: top; /* top of the container*/
     clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);  /* used for clipping*/
+    position: relative; /* where top and left og logo box will be count */
+}
+
+.logo-box {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+}
+
+.logo {
+    height: 35px;
+}
+
+.heading-primary {
+    color: #fff;
+    text-transform: uppercase;
+    
+}
+
+.heading-primary-main {
+    display: block;  /* block level elements occupy the entire width available and create line breaks after and before them*/
+    font-size: 60px;
+    font-weight: 400;
+    letter-spacing: 35px;
+}
+
+.heading-primary-sub {
+    display: block;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 17.4px;
+}
+
+.text-box {
+    position: absolute;
+    top: 40%; /* 50% from the parent. the starting point of the text box will be placed at 50% */
+    left: 50%;
+    transform: translate(-50%, -50%); /* once translate is used here, text box is not in the relation with the parent but is in the relation itself */
 }
