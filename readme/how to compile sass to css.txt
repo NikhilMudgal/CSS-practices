@@ -1,0 +1,2 @@
+// create the sass file write the command of "node-sass input_file output_file -w" to compile sass
+ where -w will be to keep a watch on the sass file and css will be updated automatically 
