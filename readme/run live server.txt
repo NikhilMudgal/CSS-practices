@@ -1,0 +1,1 @@
+install live-server npm package globally and write "live-server" in the cmd
