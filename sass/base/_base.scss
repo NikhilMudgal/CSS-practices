@@ -1,0 +1,20 @@
+/* cross browser reset */
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;  /* by setting box-sizing property on each and every element on the entire page to inherit will automatically inherit whatever we put in the border-box*/
+    /*box-sizing: border-box;  border, padding are not added to the total width and total height specified for a box */
+}
+
+html {
+    //this define what 1 rem will be
+   font-size: 62.5%;   /* bad practice to set font-size in pixels */
+}
+
+/*rems do not support below IE version 9*/
+
+body {
+    box-sizing: border-box;
+}

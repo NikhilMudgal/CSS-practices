@@ -1,0 +1,1 @@
+components are the building blocks that are reusable and independent everywhere across our website

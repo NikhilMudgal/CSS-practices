@@ -14,63 +14,7 @@ html {
 
 /*rems do not support below IE version 9*/
 body {
-  font-family: "Lato", sans-serif;
-  font-weight: 400;
-  /* font-size: 16px; */
-  line-height: 1.7;
-  color: #777;
-  padding: 3rem;
   box-sizing: border-box; }
-
-.header {
-  height: 95vh;
-  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/hero.jpg);
-  background-size: cover;
-  /* cover the entire container*/
-  background-position: top;
-  /* top of the container*/
-  clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
-  /* used for clipping*/
-  position: relative;
-  /* where top and left og logo box will be count */ }
-  .header__logo-box {
-    position: absolute;
-    top: 4rem;
-    left: 4rem; }
-  .header__logo {
-    height: 3.5rem; }
-  .header__text-box {
-    position: absolute;
-    top: 40%;
-    /* 50% from the parent. the starting point of the text box will be placed at 50% */
-    left: 50%;
-    transform: translate(-50%, -50%);
-    /* once translate is used here, text box is not in the relation with the parent but is in the relation itself */
-    text-align: center; }
-
-.heading-primary {
-  color: #fff;
-  text-transform: uppercase;
-  backface-visibility: hidden; }
-  .heading-primary--main {
-    display: block;
-    /* block level elements occupy the entire width available and create line breaks after and before them*/
-    font-size: 6rem;
-    font-weight: 400;
-    letter-spacing: 3.5rem;
-    animation-name: moveInLeft;
-    animation-duration: 1s;
-    animation-timing-function: ease-out;
-    /* animation-iteration-count: 3; */ }
-  .heading-primary--sub {
-    display: block;
-    font-size: 2rem;
-    font-weight: 700;
-    letter-spacing: 1.75rem;
-    /* animation-name: moveInRight;
-        animation-duration: 1s; */
-    animation: moveInRight 1s ease-out;
-    margin-bottom: 6rem; }
 
 @keyframes moveInLeft {
   0% {
@@ -99,6 +43,38 @@ body {
   100% {
     transform: translate(0); } }
 
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  /* font-size: 16px; */
+  line-height: 1.7;
+  color: #777;
+  padding: 3rem; }
+
+.heading-primary {
+  color: #fff;
+  text-transform: uppercase;
+  backface-visibility: hidden; }
+  .heading-primary--main {
+    display: block;
+    /* block level elements occupy the entire width available and create line breaks after and before them*/
+    font-size: 6rem;
+    font-weight: 400;
+    letter-spacing: 3.5rem;
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    /* animation-iteration-count: 3; */ }
+  .heading-primary--sub {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1.75rem;
+    /* animation-name: moveInRight;
+        animation-duration: 1s; */
+    animation: moveInRight 1s ease-out;
+    margin-bottom: 6rem; }
+
 .btn {
   /* pesudo class*/ }
   .btn:link, .btn:visited {
@@ -108,7 +84,6 @@ body {
     display: inline-block;
     border-radius: 10rem;
     transition: all .2s;
-    /*transition has to be on the initial state */
     position: relative;
     font-size: 1.6rem; }
   .btn:hover {
@@ -122,7 +97,6 @@ body {
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
   .btn::after {
     content: "";
-    /* content and display are required properties */
     display: inline-block;
     height: 100%;
     width: 100%;
@@ -139,8 +113,30 @@ body {
       background-color: #fff; }
   .btn--animated {
     animation: bottomTop 1s ease-out .75s;
-    animation-fill-mode: backwards;
-    /* it will apply style of 0% before the animation starts*/ }
+    animation-fill-mode: backwards; }
 
-/* hover and active should be set after link and visited*/
-/* animation-fill-mode CSS property sets how a CSS animation applies styles to its target before and after its execution. */
+.header {
+  height: 95vh;
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/hero.jpg);
+  background-size: cover;
+  /* cover the entire container*/
+  background-position: top;
+  /* top of the container*/
+  clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+  /* used for clipping*/
+  position: relative;
+  /* where top and left og logo box will be count */ }
+  .header__logo-box {
+    position: absolute;
+    top: 4rem;
+    left: 4rem; }
+  .header__logo {
+    height: 3.5rem; }
+  .header__text-box {
+    position: absolute;
+    top: 40%;
+    /* 50% from the parent. the starting point of the text box will be placed at 50% */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* once translate is used here, text box is not in the relation with the parent but is in the relation itself */
+    text-align: center; }
