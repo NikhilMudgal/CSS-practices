@@ -33,49 +33,44 @@ body {
   /* used for clipping*/
   position: relative;
   /* where top and left og logo box will be count */ }
-
-.header__logo-box {
-  position: absolute;
-  top: 4rem;
-  left: 4rem; }
-
-.header__logo {
-  height: 3.5rem; }
+  .header__logo-box {
+    position: absolute;
+    top: 4rem;
+    left: 4rem; }
+  .header__logo {
+    height: 3.5rem; }
+  .header__text-box {
+    position: absolute;
+    top: 40%;
+    /* 50% from the parent. the starting point of the text box will be placed at 50% */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* once translate is used here, text box is not in the relation with the parent but is in the relation itself */
+    text-align: center; }
 
 .heading-primary {
   color: #fff;
   text-transform: uppercase;
   backface-visibility: hidden; }
-
-.heading-primary--main {
-  display: block;
-  /* block level elements occupy the entire width available and create line breaks after and before them*/
-  font-size: 6rem;
-  font-weight: 400;
-  letter-spacing: 3.5rem;
-  animation-name: moveInLeft;
-  animation-duration: 1s;
-  animation-timing-function: ease-out;
-  /* animation-iteration-count: 3; */ }
-
-.heading-primary--sub {
-  display: block;
-  font-size: 2rem;
-  font-weight: 700;
-  letter-spacing: 1.75rem;
-  /* animation-name: moveInRight;
-    animation-duration: 1s; */
-  animation: moveInRight 1s ease-out;
-  margin-bottom: 6rem; }
-
-.header__text-box {
-  position: absolute;
-  top: 40%;
-  /* 50% from the parent. the starting point of the text box will be placed at 50% */
-  left: 50%;
-  transform: translate(-50%, -50%);
-  /* once translate is used here, text box is not in the relation with the parent but is in the relation itself */
-  text-align: center; }
+  .heading-primary--main {
+    display: block;
+    /* block level elements occupy the entire width available and create line breaks after and before them*/
+    font-size: 6rem;
+    font-weight: 400;
+    letter-spacing: 3.5rem;
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    /* animation-iteration-count: 3; */ }
+  .heading-primary--sub {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1.75rem;
+    /* animation-name: moveInRight;
+        animation-duration: 1s; */
+    animation: moveInRight 1s ease-out;
+    margin-bottom: 6rem; }
 
 @keyframes moveInLeft {
   0% {
@@ -104,55 +99,48 @@ body {
   100% {
     transform: translate(0); } }
 
-.btn:link,
-.btn:visited {
-  /* pesudo class*/
-  text-transform: uppercase;
-  text-decoration: none;
-  padding: 1.5rem 4rem;
-  display: inline-block;
-  border-radius: 10rem;
-  transition: all .2s;
-  /*transition has to be on the initial state */
-  position: relative;
-  font-size: 1.6rem; }
-
-.btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
-
-.btn:active {
-  transform: translateY(-1px);
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
+.btn {
+  /* pesudo class*/ }
+  .btn:link, .btn:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1.5rem 4rem;
+    display: inline-block;
+    border-radius: 10rem;
+    transition: all .2s;
+    /*transition has to be on the initial state */
+    position: relative;
+    font-size: 1.6rem; }
+  .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
+    .btn:hover::after {
+      transform: scaleX(1.4) scaleY(1.6);
+      opacity: 0; }
+  .btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
+  .btn::after {
+    content: "";
+    /* content and display are required properties */
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 10rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all 0.4s; }
+  .btn--white {
+    background-color: #fff;
+    color: #777; }
+    .btn--white::after {
+      background-color: #fff; }
+  .btn--animated {
+    animation: bottomTop 1s ease-out .75s;
+    animation-fill-mode: backwards;
+    /* it will apply style of 0% before the animation starts*/ }
 
 /* hover and active should be set after link and visited*/
-.btn--white {
-  background-color: #fff;
-  color: #777; }
-
-.btn::after {
-  content: "";
-  /* content and display are required properties */
-  display: inline-block;
-  height: 100%;
-  width: 100%;
-  border-radius: 10rem;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  transition: all 0.4s; }
-
-.btn--white::after {
-  background-color: #fff; }
-
-.btn:hover::after {
-  transform: scaleX(1.4) scaleY(1.6);
-  opacity: 0; }
-
-.btn--animated {
-  animation: bottomTop 1s ease-out .75s;
-  animation-fill-mode: backwards;
-  /* it will apply style of 0% before the animation starts*/ }
-
 /* animation-fill-mode CSS property sets how a CSS animation applies styles to its target before and after its execution. */
