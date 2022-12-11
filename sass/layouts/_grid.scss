@@ -1,6 +1,6 @@
 .row {
     max-width: $grid-width;  // using max-width, if the viewport is bigger than mentioned space, it will adapt the width mentioned. but if the viewport width is smaller, then it will occupy the 100% of available space
-    background-color: #eee;
+    // background-color: #eee;
     margin: 0 auto; // to center block elements inside another block elements
 
     &:not(:last-child) {  // same as .row:not()  everything except the last child
@@ -13,7 +13,7 @@
     // $ signifies all classes that ends with col
     
     [class^="col-"] {  
-        background-color: red;
+        // background-color: red;
         float: left;
 
         &:not(:last-child) {
