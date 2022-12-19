@@ -3,11 +3,11 @@
     perspective: 150rem; // perspective property should always be defined to parent. it is the child element that gets the perspective view
     -moz-perspective: 150rem;
     position: relative;
-    height: 50rem;
+    height: 51rem;
     &__side {
-        color: white;
+        // color: white;
         font-size: 2rem;
-        height: 50rem;
+        height: 51rem;
         transition: all .8s ease;
         position: absolute;
         top: 0;
@@ -63,7 +63,7 @@
 
     &__heading {
         position: absolute;
-        top: 15rem;
+        top: 12rem;
         right: 2rem;
         font-weight: 300;
         text-transform: uppercase;
@@ -82,5 +82,22 @@
             rgba($color-secondary-dark, .85));
         }
     }
-    
+
+    &__details {
+        padding: 3rem;
+        ul{
+            list-style: none;
+            width: 80%;
+            margin: 0 auto;
+            li{
+                text-align: center;
+                font-size: 1.5rem;
+                padding: 1rem;
+            
+                &:not(:last-child) {
+                border-bottom: 1px solid $color-grey;
+            }
+        }
+        }
+    }  
 }
