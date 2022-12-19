@@ -1,4 +1,5 @@
 .card {
+    // card functionality
     perspective: 150rem; // perspective property should always be defined to parent. it is the child element that gets the perspective view
     -moz-perspective: 150rem;
     position: relative;
@@ -32,10 +33,29 @@
     }
     
     &:hover &__side--front {  // .card:hover .card__side
-        transform: rotateY(180deg);
+        transform: rotateY(-180deg);
     }
 
     &:hover &__side--back { 
         transform: rotateY(0deg);
+    }
+
+    // front side style
+    &__picture {
+        background-size: cover;
+        height: 23rem;
+        background-blend-mode: screen;
+        &--1 {
+            background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark),
+            url(../../img/nat-5.jpg);
+        }
+
+        &--2 {
+            background-image: url(../../img/nat-5.jpg);
+        }
+
+        &--3 {
+            background-image: url(../../img/nat-5.jpg);
+        }
     }
 }
