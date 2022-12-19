@@ -16,6 +16,7 @@
         backface-visibility: hidden; // it hides the backpart of an element
         border-radius: 3px;
         box-shadow: 0 1.5rem 40px 4rem rgba($color-black, .15);
+        overflow: hidden;
         &--front {
         background-color: $color-white;
         }
@@ -45,6 +46,7 @@
         background-size: cover;
         height: 23rem;
         background-blend-mode: screen;
+        clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
         &--1 {
             background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark),
             url(../../img/nat-5.jpg);
@@ -58,4 +60,27 @@
             background-image: url(../../img/nat-5.jpg);
         }
     }
+
+    &__heading {
+        position: absolute;
+        top: 15rem;
+        right: 2rem;
+        font-weight: 300;
+        text-transform: uppercase;
+        color: $color-white;
+        width: 75%;
+        font-size: 2.8rem;
+        text-align: right;
+    }
+
+    &__heading-span {
+        padding: 1rem 1.5rem;
+        -webkit-box-decoration-break:clone;
+        box-decoration-break: clone;
+        &--1 {
+            background-image: linear-gradient(to right bottom, rgba($color-secondary-light, .85), 
+            rgba($color-secondary-dark, .85));
+        }
+    }
+    
 }
