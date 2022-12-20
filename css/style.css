@@ -112,6 +112,15 @@ body {
 .u-margin-bottom-small {
   margin-bottom: 1.5rem; }
 
+.u-margin-top-big {
+  margin-top: 8rem; }
+
+.u-margin-top-medium {
+  margin-top: 4rem; }
+
+.u-margin-top-small {
+  margin-top: 1.5rem; }
+
 .btn {
   /* pesudo class*/ }
   .btn:link, .btn:visited {
@@ -148,6 +157,11 @@ body {
     color: #777; }
     .btn--white::after {
       background-color: #fff; }
+  .btn--green {
+    background-color: #55c57a;
+    color: #fff; }
+    .btn--green::after {
+      background-color: #55c57a; }
   .btn--animated {
     animation: bottomTop 1s ease-out .75s;
     animation-fill-mode: backwards; }

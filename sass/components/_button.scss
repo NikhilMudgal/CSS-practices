@@ -46,6 +46,14 @@
      }
     }
 
+    &--green {
+      background-color: $color-primary;
+      color: $color-white;
+   &::after{
+      background-color: $color-primary;
+   }
+  }
+
     &--animated {
         animation: bottomTop 1s ease-out .75s;
         animation-fill-mode: backwards; // it will apply style of 0% before the animation starts*/
