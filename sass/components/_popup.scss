@@ -40,5 +40,9 @@
         column-count: 2;
         column-gap: 4rem; // 1em=14px
         column-rule: 1px solid $color-grey;
+        -moz-hyphens: auto;
+        -ms-hyphens: auto;
+        -webkit-hyphens: auto;
+        hyphens: auto;
     }
 }
