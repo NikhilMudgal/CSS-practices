@@ -26,9 +26,6 @@
 
 // content directive is used to pass lines of code into a mixin
 
-@mixin respond-phone {
-    @media (max-width: 600px) { @content };
-}
 
 /*
 $breakpoint argument choices:
@@ -36,9 +33,8 @@ $breakpoint argument choices:
 - tab-port
 - tab-land
 - big-desktop
-*/
 
-/* 1em= 16px
+1em= 16px
     600px -> 600/16 = 37.5em
 */
 @mixin respond($breakpoint) {

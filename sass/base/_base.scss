@@ -10,24 +10,24 @@
 
 html {
     //this define what 1 rem will be
-   font-size: 62.5%;   /* bad practice to set font-size in pixels */
-
+   font-size: 62.5%;   /* bad practice to set font-size in pixels */ // 1rem =10px 10px/16px=62.5%
+   
     // we are passing the block of code inside the mixin respond-phone and all of the content will be called at the @content
-   @include respond-phone {
-    font-size: 50%;
+ 
+    // @include respond(phone) {   // for screen-width <=600px, since we have already set for max-width: 900px, so we do not require for <=600px because in the end, 900px styling will be applied automatically
+    //     font-size: 50%; //
+    // }
+    
+    @include respond(tab-land) { //width< 900
+        font-size: 56.25%; // 1rem = 9px, 9/16=56.25%
     }
 
-    @include respond(phone) {
-        font-size: 50%;
+    @include respond(tab-port) { // width <600
+        font-size: 50%; // 1rem = 8px, 8/16=50%
     }
-    @include respond(tab-port) {
-        font-size: 60%;
-    }
-    @include respond(tab-land) {
-        font-size: 70%;
-    }
+
     @include respond(big-desktop) {
-        font-size: 80%;
+        font-size: 75%; // 1rem=12px, 12/16=75%
     }
 
 }
