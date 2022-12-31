@@ -11,6 +11,12 @@
 html {
     //this define what 1 rem will be
    font-size: 62.5%;   /* bad practice to set font-size in pixels */
+
+    // we are passing the block of code inside the mixin respond-phone and all of the content will be called at the @content
+   @include respond-phone {
+    font-size: 50%;
+}
+
 }
 
 /*rems do not support below IE version 9*/
