@@ -15,7 +15,11 @@ html {
     // we are passing the block of code inside the mixin respond-phone and all of the content will be called at the @content
    @include respond-phone {
     font-size: 50%;
-}
+    }
+
+    @include respond(phone) {
+        font-size: 50%;
+    }
 
 }
 

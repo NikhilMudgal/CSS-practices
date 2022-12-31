@@ -6,6 +6,13 @@
 [1200-1800] is where normal styles apply
 1800px+ : Big Desktop
 */
+/*
+$breakpoint argument choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+*/
 /* cross browser reset */
 *,
 *::after,
@@ -19,6 +26,9 @@
 html {
   font-size: 62.5%;
   /* bad practice to set font-size in pixels */ }
+  @media (max-width: 600px) {
+    html {
+      font-size: 50%; } }
   @media (max-width: 600px) {
     html {
       font-size: 50%; } }
