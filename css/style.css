@@ -13,6 +13,9 @@ $breakpoint argument choices:
 - tab-land
 - big-desktop
 */
+/* 1em= 16px
+    600px -> 600/16 = 37.5em
+*/
 /* cross browser reset */
 *,
 *::after,
@@ -29,9 +32,18 @@ html {
   @media (max-width: 600px) {
     html {
       font-size: 50%; } }
-  @media (max-width: 600px) {
+  @media (max-width: 37.5em) {
     html {
       font-size: 50%; } }
+  @media (max-width: 56.25em) {
+    html {
+      font-size: 60%; } }
+  @media (max-width: 75em) {
+    html {
+      font-size: 70%; } }
+  @media (min-width: 112.5em) {
+    html {
+      font-size: 80%; } }
 
 /*rems do not support below IE version 9*/
 body {
