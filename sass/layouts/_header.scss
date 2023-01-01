@@ -6,7 +6,13 @@
     background-size: cover;  /* cover the entire container*/
     background-position: top; /* top of the container*/
     clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);  /* used for clipping*/
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);  /* used for clipping*/
     position: relative; /* where top and left og logo box will be count */
+
+    @include respond(phone) {
+      clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+    }
 
     &__logo-box {   // same as header__logo-box
       position: absolute;

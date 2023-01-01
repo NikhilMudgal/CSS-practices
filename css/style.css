@@ -624,8 +624,14 @@ body {
   /* top of the container*/
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   /* used for clipping*/
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  /* used for clipping*/
   position: relative;
   /* where top and left og logo box will be count */ }
+  @media (max-width: 37.5em) {
+    .header {
+      clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%); } }
   .header__logo-box {
     position: absolute;
     top: 4rem;
