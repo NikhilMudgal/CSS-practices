@@ -320,7 +320,8 @@
     </main>
     <footer class="footer">
         <div class="footer__logo-box">
-            <img src="img/logo-green-2x.png" alt="full-logo" class="footer__logo">
+            <!--here we are doing density switching, we have mentioned descriptors as 1x & 2x as image with 1x will be used for low resolution and image with 2x will be used for higher resolution. we are giving browser 2 choices with srcset attribute -->
+            <img srcset="img/logo-green-1x.png 1x, img/logo-green-2x.png 2x" alt="full-logo" class="footer__logo">
         </div>
         <div class="row">
             <div class="col-1-of-2">
