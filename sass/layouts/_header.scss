@@ -9,9 +9,9 @@
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);  /* used for clipping*/
     position: relative; /* where top and left og logo box will be count */
 
-    @media (min-resolution: 192dpi) and (min-width: 37.5em), 
-    (-webkit-min-device-pixel-ratio:2) and (min-width: 37.5em),
-    (min-width: 125em){ // dpi -> dots per inch, resolution media query. min-resolution logic same as min-width. , act as or operator
+    @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em), 
+    only screen and (-webkit-min-device-pixel-ratio:2) and (min-width: 37.5em),
+    only screen and (min-width: 125em){ // dpi -> dots per inch, resolution media query. min-resolution logic same as min-width. , act as or operator
       background-image: linear-gradient(to right bottom, 
     rgba($color-secondary-light, 0.8), 
     rgba($color-secondary-dark, 0.8)), url(../img/hero.jpg);
