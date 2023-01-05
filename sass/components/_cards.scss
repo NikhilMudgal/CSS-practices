@@ -140,7 +140,9 @@
         font-weight: 100;
     }
 
-    @include respond(tab-port) {
+    // @include respond(tab-port) {
+    @media only screen and (max-width: 56.25em),
+           only screen and (hover: none) { // for touch screen devices, where back of the card will not be shown until we click on the card. so we get the back of the card below the front of the card
             height: auto;
             border-radius: 3px;
             background-color: $color-white;
